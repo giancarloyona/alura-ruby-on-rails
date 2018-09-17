@@ -1,8 +1,6 @@
 Rails.application.routes.draw do
   
-  get "/produtos/new" => "produtos#new"
-  post "/produtos" => "produtos#create"
-  
+  resources :produtos, only:[:new,:create,:destroy]
   root "produtos#index"
 
 end
