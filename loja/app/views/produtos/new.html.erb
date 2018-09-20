@@ -20,6 +20,10 @@
     <%= f.number_field :quantidade, step:1, class:"form-control" %>
     <%= f.label :preco %>
     <%= f.number_field :preco, class:"form-control" %> 
-    <%= f.submit "Criar o produto", class:"btn btn-primary" %>
+    <%= f.label :departamento %>
+    <%= f.collection_select :departamento_id, @departamentos, :id, :nome, {}, class: "form-control" %>
 </div>
+    <br>
+    <%= f.submit "Criar o produto", class:"btn btn-primary" %>
+
 <% end %>
